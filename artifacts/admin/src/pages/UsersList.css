@@ -1,0 +1,181 @@
+.users-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.table-card {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.table-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.table-count {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0,0,0,0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.data-table td {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #312e81;
+  color: #a5b4fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.role-badge, .status-badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.role-provider {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+}
+
+.role-client {
+  background: rgba(20, 184, 166, 0.15);
+  color: #2dd4bf;
+}
+
+.status-active {
+  background: rgba(52, 211, 153, 0.12);
+  color: #34d399;
+}
+
+.status-pending {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fbbf24;
+}
+
+.status-suspended {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}
+
+.date-cell {
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+.action-btn.view {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+}
+
+.action-btn.danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+}
+
+.action-btn.approve {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+}
+
+.action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.role-admin {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}
+
+.search-input {
+  padding: 0.45rem 0.875rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  outline: none;
+  min-width: 220px;
+  transition: border-color 0.15s;
+}
+
+.search-input::placeholder { color: #475569; }
+
+.search-input:focus {
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(255,255,255,0.07);
+}

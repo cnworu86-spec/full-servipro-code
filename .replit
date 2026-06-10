@@ -1,0 +1,36 @@
+modules = ["nodejs-24", "postgresql-16"]
+
+[[artifacts]]
+id = "artifacts/api-server"
+
+[[artifacts]]
+id = "artifacts/mockup-sandbox"
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[agent]
+stack = "PNPM_WORKSPACE"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[nix]
+channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+VAPID_PUBLIC_KEY = "BLFCbJu4pQgUDHv7XOkM43LiMbQyKg3npcrgx5XhUsy9MxxhEuHa_DB4ghQnJNeusTzDw5MpwCfrc210YlMnUPs"
+VAPID_PRIVATE_KEY = "K_ogC2EGOP1BUHT1bR7L0qC1bX8wCm8_SLVFqL53fl4"
+VAPID_EMAIL = "mailto:admin@servipro.com"
